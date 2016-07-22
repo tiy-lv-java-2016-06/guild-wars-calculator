@@ -1,5 +1,7 @@
 # Guild Wars Calculator
 
+![logo](gw2logo.jpg)
+
 ## Description
 Time to play with a real world api to produce something useful for the players.  We are going to create a recipe pricer with the open data from the Guild Wars 2 API.
 
@@ -39,3 +41,8 @@ Create a page for the following:
 * Display the high/low prices of each ingredient
 * Display the Best/Worst case cost numbers for crafting the item.
 * Display a graph of the current buy/sell orders for the output item so the user can see their potential for selling.
+
+## Resources
+* [Github Repo](https://github.com/tiy-lv-java-2016-06/guild-wars-calculator)
+* [RestTemplate JavaDoc](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
+* [RestTemplate Spring Example](https://spring.io/guides/gs/consuming-rest/)
