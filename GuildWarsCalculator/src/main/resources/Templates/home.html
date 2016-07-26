@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guild Wars</title>
+</head>
+<body>
+    <h1>Recipe: {{recipe.id}}</h1>
+    <h3>Type: {{recipe.type}}</h3>
+    <h3>Time to Craft (ms): {{recipe.timeOfCraft}}</h3>
+
+    <h3>Disciplines:</h3>
+    <ul>
+        {{#recipe.disciplines}}
+
+        <li>{{.}}</li>
+
+        {{/recipe.disciplines}}
+    </ul>
+
+    <h3>What you need for this recipe:</h3>
+    <ul>
+        {{#recipe.Ingredients}}
+        <li> {{count}} {{name}} - Cost: {{price}} coins each.  **  Total: {{total}}</li>
+        {{/recipe.Ingredients}}
+    </ul>
+
+    <h2>It will cost {{overallTotal}} coins to craft this recipe.</h2>
+</body>
+</html>
