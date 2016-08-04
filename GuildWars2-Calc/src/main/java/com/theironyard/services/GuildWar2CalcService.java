@@ -34,19 +34,16 @@ public class GuildWar2CalcService {
         Item item = restTemplate.getForObject(ITEM_URL + id, Item.class);
         return item;
     }
-
-    public Item getIngredientList(Recipe recipe){
-        List<Item> itemList = recipe.getIngredients();
-        Item foundItems = null;
-        for (Item item : itemList){
+    public Item getByIngredients(Recipe recipe){
+        List<Item> items = recipe.getIngredients();
+        Item ingredientItem = null;
+        for(Item item : items){
             item = restTemplate.getForObject(ITEM_URL + item.getId(), Item.class);
-            foundItems = item;
+            ingredientItem = item;
         }
-        return foundItems;
+        return ingredientItem;
     }
 
-    public Price getByPrice(Integer id, List<Item> objectList){
-        Price price = restTemplate.getForObject(PRICE_URL + id, Price.class);
-        return price;
-    }
+
+
 }

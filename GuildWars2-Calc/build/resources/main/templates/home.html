@@ -17,7 +17,7 @@
         <h3>Output Item: </h3> <p> {{#recipe.outputItemId}} {{item.name}} {{/recipe.outputItemId}}</p>
         <h3>Time to Craft: </h3> <p>{{recipe.timeToCraft}}ms</p>
         <h3>Discipline(s):</h3> <p>{{recipe.disciplines}}</p>
-        <h3>Ingredients:</h3> <p>{{#ingredientItem}} {{.}} {{/ingredientItem}}</p>
+        <h3>Ingredients:</h3> <p>{{#recipe.ingredients}} {{.}} {{/recipe.ingredients}}</p>
     </div>
 </div>
 </body>

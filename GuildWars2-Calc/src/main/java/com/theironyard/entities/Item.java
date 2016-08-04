@@ -11,8 +11,6 @@ public class Item {
 
     private Integer id;
 
-    private Integer count;
-
     private String name;
 
     public Item() {
@@ -34,11 +32,4 @@ public class Item {
         this.id = id;
     }
 
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
 }

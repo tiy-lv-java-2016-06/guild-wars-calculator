@@ -25,6 +25,9 @@ public class Recipe {
     @JsonProperty("output_item_id")
     private Integer outputItemId;
 
+    @JsonProperty("ingredients.count")
+    private Integer count;
+
     public Recipe() {
     }
 
@@ -74,5 +77,13 @@ public class Recipe {
 
     public void setOutputItemId(Integer outputItemId) {
         this.outputItemId = outputItemId;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

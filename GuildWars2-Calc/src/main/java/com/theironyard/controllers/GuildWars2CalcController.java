@@ -25,11 +25,10 @@ public class GuildWars2CalcController {
 
     @RequestMapping(path = "/recipes/{id}", method = RequestMethod.GET)
     public String getRecipe(@PathVariable Integer id, Model model){
-        Item item = new Item();
         Recipe recipe = guildWar2CalcService.getByRecipe(id);
         model.addAttribute("recipe", recipe);
         model.addAttribute("item", guildWar2CalcService.getByOutputItem(recipe.getOutputItemId()));
-        model.addAttribute("ingredientItem", guildWar2CalcService.getIngredientList(recipe));
+        model.addAttribute("ingredientItem", guildWar2CalcService.getByIngredients(recipe));
         return "home";
     }
 }
